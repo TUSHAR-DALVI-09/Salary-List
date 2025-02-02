@@ -24,8 +24,16 @@
         display: flex;
         background-color: pink;
         width: auto;
+        margin-right: 20px;
+        border-radius: 5px;
 
     }
+    label{
+        font-size: 15px;
+        font-weight: 550;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
     input{
         display: flex;
         font-size: 20px;
@@ -41,6 +49,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: palevioletred;
     }
     .submit{
         font-size: medium;
@@ -48,6 +57,11 @@
         height: 30px;
         border-radius: 10px;
         border: 2px solid black;
+        background-color: papayawhip;
+        color: red;
+    }
+    .submit:hover{
+        background-color: pink;
     }
     h1{
         display: contents;
@@ -55,14 +69,22 @@
         color: blue;
     }
 
+
 </style>
 <body>
     <div class="container">
     <form method="POST">
-        Enter Your Name<input type="text" name="name" required><br>
-        Enter Your Basic Salary <input type="number" name="basic" required><br>
-        Enter DA% <input type="text" name="daper"><br>
-        Enter HRA% <input type="text" name="hraper"><br>
+        <label>Enter Your Name</label>
+        <input type="text" name="name" required><br>
+
+        <label>Enter Your Basic Salary</label>
+        <input type="number" name="basic" required><br>
+
+        <label>Enter DA%</label>
+        <input type="text" name="daper"><br>
+
+        <label>Enter HRA%</label>
+        <input type="text" name="hraper"><br>
 
         <div class="btn">
         <button class="submit" name="b1">Submit</button></div>
@@ -84,7 +106,7 @@
         echo"<h1>Basic Salary - $basic <h1><br>";
         echo"<h1>DA - $daamt <h1><br>";
         echo"<h1>HRA - $hraper <h1><br>";
-        echo"<h1>Total Salary - $total <br><h1>";
+        echo"<h1>Total Salary - $total <h1><br>";
     }
     ?>
 </body>
